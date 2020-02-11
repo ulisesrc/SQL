@@ -28,7 +28,7 @@ Obtendrá todas las columnas que se llamen
 "Id_Codigo"
 
 ```sql
-EXEC SP_INFOTABLE 'Id_Codigo'        	
+EXEC sp_infotable 'Id_Codigo'        	
 ```
 ---
 Obtendra todas las tablas que se titulen 'Tb'
