@@ -24,44 +24,44 @@ Valor:
 **Ejemplos de uso:**
 
 
-Obtendrá toda la columna que se llamen 
+Obtendrá todas las columnas que se llamen 
 "Id_Codigo"
 
 ```sql
 EXEC SP_INFOTABLE 'Id_Codigo'        	
 ```
 ---
-Obtendra toda las tablas que se titulen 'Tabla'
+Obtendra todas las tablas que se titulen 'Tb'
 ```sql
-EXEC sp_infotable '', 'Tabla'
+EXEC sp_infotable '', 'Tb'
 ```
 ---
-Obtendra toda las tablas de la base de datos que llama  'BD'
+Obtendra el diccionario de datos de la base de datos 'BD_Info'
 ```sql
-EXEC sp_infotable '', '', 'BD'
+EXEC sp_infotable '', '', 'BD_Info'
 ```
 ---
-Obtendra toda las tablas que tengan la columna "Id_Codigo" y sea una llave primaria
+Obtendra todas las tablas que tengan la columna "Id_Codigo" y sea una llave primaria
 ```sql
 EXEC sp_infotable 'Id_Codigo', '', '', 1	
 ```
 ---
-Obtendra toda las tablas que tengan la columna "Id_Codigo" y sea llave foránea
+Obtendra todas las tablas que tengan la columna "Id_Codigo" y sea llave foránea
 ```sql
 EXEC sp_infotable 'Id_Codigo', '', '', 2
 ```
 ---
-Obtendra toda las tablas que tengan la columna "Id_Codigo" y que sea llave primaria o forenea
+Obtendra todas las tablas que tengan la columna "Id_Codigo" y que sea llave primaria o forenea
 ```sql
 EXEC sp_infotable 'Id_Codigo', '', '', 3
 ```
 ---
-Obtendra todo las columnas de la tabla titulada "Tb" y ordenará los elemento como fueron dado de alta
+Obtendra todas las columnas de la tabla "Tb" y ordenará los elemento como fueron dado de alta
 ```sql
 EXEC sp_infotable '', 'Tb', '', 0, 1		
 ```
 ---
-Obtendra todo las columnas de la tabla titulada "Tb" y ordenará los elemento alfabéticamente
+Obtendra todas las columnas de la tabla "Tb" y ordenará los elemento alfabéticamente
 ```sql
 EXEC sp_infotable '', 'Tb', '', 0, 0
 ```
@@ -70,14 +70,14 @@ Si no se sabe el nombre de la columna y/o tabla con precisión se puede utilizar
 ```sql
 EXEC sp_infotable 'Id_%'		
 ```
-Buscara todo las columnas que comiencen con **Id_** 
+Buscara todas las columnas que comiencen con **Id_** 
 
 ---
-Y por supuesto que se puede combinar el uso de los parámetros
+Y por supuesto que se puede combinar los parámetros
 ```sql
 EXEC SP_INFOTABLE '%cliente%', 'Tab%', '', 3 
 ```
-Buscara todas las columnas que contengan la palabra cliente, de todas las tablas que empiecen con TAB pero donde que sea una Llave Primaria o una llave Foranea 
+Buscara todas las columnas que contengan la palabra cliente, de todas las tablas que empiecen con TAB donde que sea una llave primaria o una llave foranea 
 
 ---
 
